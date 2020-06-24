@@ -3,43 +3,7 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-    <div class="container-fluid">
-        <div class="row mt-5">
-            <div class="col-lg-3 col-md-5">
-                <div class="card border-warning mb-3" style="max-width: 20rem;">
-                    <div class="card-header">Météo à {{ weather.name }}</div>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            Il fait {{ weather.main.temp }} °C
-                        </h4>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-5">
-                <div class="card border-warning mb-3" style="max-width: 20rem;">
-                    <div class="card-header">
-                        <div class="form-group weather-form">
-                            <label class="col-form-label col-form-label-sm" for="input_city">Météo à</label>
-                            <div class="form-inline">
-                                <input class="form-control form-control-sm mr-sm-2" type="text" id="input_city">
-                                <button class="btn btn-sm btn-secondary my-2 my-sm-0" data-url="{{ path('weather_city') }}"
-                                        id="input_city" type="submit">
-                                    Go
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <span class="ajax-errors"></span>
-                            <span class="ajax-results"></span>
-                        </h4>
-                        <p class="card-text">
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="jumbotron">
+        <h1 class="display-3">Hello, welcome to my playground!</h1>
     </div>
 {% endblock %}
