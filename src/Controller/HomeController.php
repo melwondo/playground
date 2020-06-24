@@ -19,6 +19,15 @@ class HomeController extends AbstractController
 {
     /**
      * @Route("/", name="home")
+     * @return Response
+     */
+    public function index()
+    {
+        return $this->render('home/index.html.twig');
+    }
+
+    /**
+     * @Route("/api", name="api")
      * @param WeatherApiService $apiService
      * @return Response
      * @throws ClientExceptionInterface
@@ -27,11 +36,11 @@ class HomeController extends AbstractController
      * @throws ServerExceptionInterface
      * @throws TransportExceptionInterface
      */
-    public function index(WeatherApiService $apiService)
+    public function apiPage(WeatherApiService $apiService)
     {
         $weather = $apiService->openWeather();
 
-        return $this->render('home/index.html.twig', [
+        return $this->render('home/api.html.twig', [
             'weather' => $weather,
         ]);
     }

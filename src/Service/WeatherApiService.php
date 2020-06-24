@@ -3,8 +3,6 @@
 
 namespace App\Service;
 
-use http\Exception\InvalidArgumentException;
-use HttpRequestException;
 use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
