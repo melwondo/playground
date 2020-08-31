@@ -1,0 +1,3 @@
+# playground
+
+OpenWeather API service
